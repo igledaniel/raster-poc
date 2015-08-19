@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Raster Proof of Concept</title>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="http://leafletjs.com/dist/leaflet.css" />
+</head>
+<body>
+  <div id="map" style="width: 1920px; height: 1080px"></div>
+
+  <script src="http://leafletjs.com/dist/leaflet.js"></script>
+  <script>
+
+    var map = L.map('map').setView([37.775,-122.419], 14);
+
+    L.tileLayer('http://localhost:8080/osm/all/{z}/{x}/{y}.png', {
+      maxZoom: 20
+    }).addTo(map);
+
+  </script>
+</body>
+</html>
